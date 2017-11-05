@@ -14,8 +14,7 @@ defmodule Blitzy.Mixfile do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      [applications: [:timex]]
-      extra_applications: [:logger]
+      extra_applications: [:logger, :timex]
     ]
   end
 
