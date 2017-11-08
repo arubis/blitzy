@@ -6,6 +6,7 @@ defmodule Blitzy.Mixfile do
       app: :blitzy,
       version: "0.1.0",
       elixir: "~> 1.5",
+      escript: [main_module: Blitzy.CLI], #1
       start_permanent: Mix.env == :prod,
       deps: deps()
     ]
@@ -14,6 +15,7 @@ defmodule Blitzy.Mixfile do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
+      mod: {Blitzy, []},
       extra_applications: [:logger, :timex]
     ]
   end
